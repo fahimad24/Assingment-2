@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- origin css -->
-    <link rel="stylesheet" href="./tailwindcss.css" />
+    <link rel="stylesheet" href="tailwind.css" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -13,24 +13,36 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- tailwind css -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <title>TechWave</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header>
-      <nav>
+  <body class="bg-[rgba(26,11,46,1)] text-white">
+    <header class="max-w-[1200px] mx-auto">
+      <nav class="flex justify-between items-center py-6">
         <div>
-          <h1>TechWave</h1>
+          <h1 class="text-3xl font-bold">
+            Tech<span
+              class="bg-linear-0 from-[rgba(247,233,63,1)] from via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] bg-clip-text text-transparent"
+              >Wave</span
+            >
+          </h1>
         </div>
-        <ul>
-          <li>About</li>
-          <li>Episodes</li>
-          <li>Host</li>
+        <ul class="flex gap-8 text-lg">
+          <li class="underline-animation"><a href="#">About</a></li>
+          <li class="underline-animation"><a href="#">Episodes</a></li>
+          <li class="underline-animation"><a href="#">Host</a></li>
         </ul>
         <div>
-          <button>Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+          <button
+            class="flex items-center gap-2 bg-linear-45 from-[rgba(247,233,63,1)] via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 text-white group"
+          >
+            Subscribe
+            <i
+              class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"
+            ></i>
+          </button>
         </div>
       </nav>
     </header>
