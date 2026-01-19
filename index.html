@@ -54,11 +54,12 @@
       <section
         class="flex flex-col bg-[url(./assets/hero-bg.png)] bg-no-repeat bg-center bg-size-[100%] items-center gap-8 md:gap-16 py-28"
       >
-        <div
-          class="w-88 h-88 flex justify-center items-center relative bg-[url(./assets/hero-circle.png)] bg-no-repeat bg-center bg-contain"
-        >
+        <div class="relative flex justify-center items-center w-88 h-88">
+          <div
+            class="w-88 h-88 absolute top-0 left-0 animate-round-circle bg-[url(./assets/hero-circle.png)] bg-no-repeat bg-center bg-contain"
+          ></div>
           <img
-            class=""
+            class="relative z-10"
             src="./assets/microphone.png"
             alt="podcast illustration"
           />
@@ -68,6 +69,7 @@
             NEW
           </p>
         </div>
+
         <div class="text-center flex flex-col gap-6 px-4 md:px-0">
           <h1 class="text-6xl font-extrabold">TechWave</h1>
 
@@ -345,5 +347,47 @@ Join thousands of young professionals and tech enthusiasts who start their day w
         </div>
       </section>
     </main>
+
+    <footer
+      class="bg-[url(./assets/footer-bg.png)] bg-no-repeat bg-center bg-size-[100%]"
+    >
+      <div class="max-w-[1200px] mx-auto py-30 space-y-9">
+        <h1 class="text-6xl font-bold text-center">
+          Tech<span
+            class="bg-linear-0 from-[rgba(247,233,63,1)] from via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] bg-clip-text text-transparent"
+            >Wave</span
+          >
+        </h1>
+        <ul class="flex justify-center gap-5 mt-10text-white">
+          <li>
+            <a href="">
+              <i class="fa-brands fa-spotify"></i
+              ><span class="opacity-60 ml-3">Spotify</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-brands fa-apple"></i
+              ><span class="opacity-60 ml-3">Apple Podcasts</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-brands fa-youtube"></i
+              ><span class="opacity-60 ml-3">YouTube</span>
+            </a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-brands fa-twitter"></i>
+              <span class="opacity-60 ml-3">Twitter</span></a
+            >
+          </li>
+        </ul>
+        <p class="opacity-60 text-center">
+          © 2026 TechWave Podcast. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

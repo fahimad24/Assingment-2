@@ -23,3 +23,16 @@ body {
 .underline-animation:hover::after {
   width: 100%;
 }
+
+@keyframes pop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-round-circle {
+  animation: pop 0.8s linear infinite;
+}
