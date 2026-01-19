@@ -22,24 +22,24 @@
     <header class="">
       <nav class="border-b border-[rgba(65,37,103,1)]">
         <div
-          class="max-w-[1200px] mx-auto flex justify-between items-center py-6"
+          class="max-w-[1200px] mx-auto flex justify-between items-center py-6 px-4 gap-4 md:gap-0"
         >
           <div>
-            <h1 class="text-4xl font-bold">
+            <h1 class="text-2xl md:text-4xl font-bold">
               Tech<span
                 class="bg-linear-0 from-[rgba(247,233,63,1)] from via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] bg-clip-text text-transparent"
                 >Wave</span
               >
             </h1>
           </div>
-          <ul class="flex gap-8 text-lg">
+          <ul class="sm:flex gap-4 hidden md:gap-8 text-sm md:text-lg">
             <li class="underline-animation"><a href="#">About</a></li>
             <li class="underline-animation"><a href="#">Episodes</a></li>
             <li class="underline-animation"><a href="#">Host</a></li>
           </ul>
-          <div>
+          <div class="sm:block hidden">
             <button
-              class="flex items-center gap-2 bg-linear-45 from-[rgba(247,233,63,1)] via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 text-white group"
+              class="flex items-center gap-2 bg-linear-45 from-[rgba(247,233,63,1)] via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 text-white group text-sm md:text-base"
             >
               Subscribe
               <i
@@ -47,43 +47,48 @@
               ></i>
             </button>
           </div>
+          <div class="sm:hidden block">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </div>
         </div>
       </nav>
 
       <!-- hero section -->
       <section
-        class="flex flex-col bg-[url(./assets/hero-bg.png)] bg-no-repeat bg-center bg-size-[100%] items-center gap-8 md:gap-16 py-28"
+        class="flex flex-col bg-[url(./assets/mobile-hero.png)] md:bg-[url(./assets/hero-bg.png)] bg-no-repeat bg-top bg-cover items-center gap-8 md:gap-16 py-12 md:py-28"
       >
-        <div class="relative flex justify-center items-center w-88 h-88">
+        <div
+          class="relative flex justify-center items-center md:w-88 md:h-88 w-50 h-50"
+        >
           <div
-            class="w-88 h-88 absolute top-0 left-0 animate-round-circle bg-[url(./assets/hero-circle.png)] bg-no-repeat bg-center bg-contain"
+            class="md:w-88 md:h-88 w-50 h-50 absolute top-0 left-0 animate-round-circle bg-[url(./assets/hero-circle.png)] bg-no-repeat bg-center bg-contain"
           ></div>
           <img
-            class="relative z-10"
+            class="relative md:w-50 md:h-50 w-20 h-30 z-10"
             src="./assets/microphone.png"
             alt="podcast illustration"
           />
           <p
-            class="absolute py-1.5 px-4 rounded-full border-green-500 text-black bg-[#00FF88] top-5 right-5 shadow-[0_3px_27px_0_rgba(0,255,136,0.5)] font-bold"
+            class="absolute py-1.5 px-4 rounded-full border-green-500 text-black bg-[#00FF88] md:top-5 md:right-5 top-2 right-2 shadow-[0_3px_27px_0_rgba(0,255,136,0.5)] font-bold"
           >
             NEW
           </p>
         </div>
 
         <div class="text-center flex flex-col gap-6 px-4 md:px-0">
-          <h1 class="text-6xl font-extrabold">TechWave</h1>
+          <h1 class="text-4xl md:text-6xl font-extrabold">TechWave</h1>
 
-          <p class="opacity-80">
+          <p class="opacity-80 text-sm md:text-base">
             Your daily dose of tech insights, productivity hacks, and personal
             growth
           </p>
-          <div>
+          <div class="flex gap-3 justify-center">
             <button
-              class="bg-linear-45 from-[rgba(247,233,63,1)] via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] px-6 py-3 rounded-full font-semibold mr-4 hover:scale-105 transition-transform duration-300 text-white"
+              class="bg-linear-45 from-[rgba(247,233,63,1)] via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold sm:mr-4 hover:scale-105 transition-transform duration-300 text-white text-sm md:text-base"
             >
               <i class="fa-brands fa-spotify"></i> Listen on Spotify</button
             ><button
-              class="border-[#00FF88] border px-5 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 text-[#00FF88]"
+              class="border-[#00FF88] border px-4 md:px-5 py-2 md:py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 text-[#00FF88] text-sm md:text-base"
             >
               <i class="fa-regular fa-envelope"></i> Subscribe
             </button>
@@ -95,10 +100,24 @@
     <main>
       <!-- content will go here -->
       <section>
-        <div class="max-w-[1200px] mx-auto pt-13 pb-30 px-4">
-          <div class="text-center pb-20 border-b border-[rgba(65,37,103,0.7)]">
-            <h2 class="text-5xl mb-10 font-bold">About the Podcast</h2>
-            <pre class="opacity-80">
+        <div class="max-w-[1200px] mx-auto pt-8 md:pt-13 pb-16 md:pb-30 px-4">
+          <div
+            class="text-center pb-12 md:pb-20 border-b border-[rgba(65,37,103,0.7)]"
+          >
+            <h2 class="text-3xl md:text-5xl mb-6 md:mb-10 font-bold">
+              About the Podcast
+            </h2>
+            <p
+              class="lg:hidden block opacity-80 text-center text-sm md:text-base"
+            >
+              TechWave is your go-to podcast for staying ahead in the fast-paced
+              world of technology. We break down complex topics into digestible
+              insights, explore productivity strategies that actually work, and
+              share stories of personal growth from industry leaders. Join
+              thousands of young professionals and tech enthusiasts who start
+              their day with TechWave.
+            </p>
+            <pre class="opacity-80 lg:block hidden text-sm md:text-base">
 TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.
 We break down complex topics into digestible insights, explore productivity strategies that actually work,
 and share stories of personal growth from industry leaders.
@@ -106,22 +125,40 @@ and share stories of personal growth from industry leaders.
 Join thousands of young professionals and tech enthusiasts who start their day with TechWave.
             </pre>
           </div>
-          <div class="mt-20 grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
+          <div
+            class="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 text-center"
+          >
             <div class="">
-              <h2 class="text-5xl font-bold mb-4 text-green-400">150K+</h2>
-              <p class="opacity-80">Monthly Listeners</p>
+              <h2
+                class="text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-green-400"
+              >
+                150K+
+              </h2>
+              <p class="opacity-80 text-sm md:text-base">Monthly Listeners</p>
             </div>
             <div>
-              <h2 class="text-5xl font-bold mb-4 text-green-400">200K+</h2>
-              <p class="opacity-80">Episodes Published</p>
+              <h2
+                class="text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-green-400"
+              >
+                200K+
+              </h2>
+              <p class="opacity-80 text-sm md:text-base">Episodes Published</p>
             </div>
             <div>
-              <h2 class="text-5xl font-bold mb-4 text-green-400">4.9★</h2>
-              <p class="opacity-80">Average Rating</p>
+              <h2
+                class="text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-green-400"
+              >
+                4.9★
+              </h2>
+              <p class="opacity-80 text-sm md:text-base">Average Rating</p>
             </div>
             <div>
-              <h2 class="text-5xl font-bold mb-4 text-green-400">50+</h2>
-              <p class="opacity-80">Industry Experts</p>
+              <h2
+                class="text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-green-400"
+              >
+                50+
+              </h2>
+              <p class="opacity-80 text-sm md:text-base">Industry Experts</p>
             </div>
           </div>
         </div>
@@ -129,49 +166,53 @@ Join thousands of young professionals and tech enthusiasts who start their day w
 
       <!-- why choose us -->
       <section class="bg-[rgba(35,14,61,1)]">
-        <div class="max-w-[1200px] mx-auto py-30">
-          <h2 class="text-5xl py-10 font-bold text-center">
+        <div class="max-w-[1200px] mx-auto py-16 md:py-30 px-4">
+          <h2 class="text-3xl md:text-5xl py-6 md:py-10 font-bold text-center">
             Why Choose TechWave?
           </h2>
           <div
-            class="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-[repeat(2,1fr),273px] gap-8"
+            class="grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-[repeat(2,1fr),273px] gap-6 md:gap-8"
           >
             <div
-              class="flex flex-col justify-center gap-8 p-10 rounded-[40px] bg-[rgba(53,17,101,0.4)] row-span-2"
+              class="flex flex-col justify-center gap-4 md:gap-8 p-6 md:p-10 rounded-3xl md:rounded-[40px] bg-[rgba(53,17,101,0.4)] sm:row-span-2"
             >
               <div><img src="./assets/headphone.png" alt="Headphone" /></div>
-              <h3 class="text-2xl font-bold">Premium Audio Quality</h3>
-              <p class="opacity-60">
+              <h3 class="text-xl md:text-2xl font-bold">
+                Premium Audio Quality
+              </h3>
+              <p class="opacity-60 text-sm md:text-base">
                 Experience crystal-clear sound with professional-grade recording
                 equipment and expert audio engineering. Every episode is
                 mastered for optimal listening across all devices and platforms.
               </p>
             </div>
             <div
-              class="flex flex-col justify-center gap-8 p-10 rounded-[40px] bg-[rgba(53,17,101,0.4)] col-span-2"
+              class="flex flex-col justify-center gap-4 md:gap-8 p-6 md:p-10 rounded-3xl md:rounded-[40px] bg-[rgba(53,17,101,0.4)] sm:col-span-2"
             >
               <div><img src="./assets/device.png" alt="Device" /></div>
-              <h3 class="text-2xl font-bold">Mobile Friendly</h3>
-              <p class="opacity-60">
+              <h3 class="text-xl md:text-2xl font-bold">Mobile Friendly</h3>
+              <p class="opacity-60 text-sm md:text-base">
                 Listen on the go with seamless mobile experience and offline
                 downloads.
               </p>
             </div>
             <div
-              class="flex flex-col justify-center gap-8 p-10 rounded-[40px] bg-[rgba(53,17,101,0.4)] col-span-2"
+              class="flex flex-col justify-center gap-4 md:gap-8 p-6 md:p-10 rounded-3xl md:rounded-[40px] bg-[rgba(53,17,101,0.4)] sm:col-span-2"
             >
               <div><img src="./assets/location.png" alt="location" /></div>
-              <h3 class="text-2xl font-bold">Global Community</h3>
-              <p class="opacity-60">
+              <h3 class="text-xl md:text-2xl font-bold">Global Community</h3>
+              <p class="opacity-60 text-sm md:text-base">
                 Connect with tech enthusiasts from over 120 countries worldwide.
               </p>
             </div>
             <div
-              class="flex flex-col justify-center gap-8 p-10 rounded-[40px] bg-[rgba(53,17,101,0.4)] col-span-2"
+              class="flex flex-col justify-center gap-4 md:gap-8 p-6 md:p-10 rounded-3xl md:rounded-[40px] bg-[rgba(53,17,101,0.4)] sm:col-span-2"
             >
               <div><img src="./assets/zap-fast.png" alt="zap-fast" /></div>
-              <h3 class="text-2xl font-bold">Exclusive Interviews</h3>
-              <p class="opacity-60">
+              <h3 class="text-xl md:text-2xl font-bold">
+                Exclusive Interviews
+              </h3>
+              <p class="opacity-60 text-sm md:text-base">
                 Get unprecedented access to industry titans, startup founders,
                 and tech visionaries. Our host secures exclusive conversations
                 you won't find anywhere else, diving deep into their journeys,
@@ -179,13 +220,13 @@ Join thousands of young professionals and tech enthusiasts who start their day w
               </p>
             </div>
             <div
-              class="flex flex-col justify-center gap-8 p-10 rounded-[40px] bg-[rgba(53,17,101,0.4)]"
+              class="flex flex-col justify-center gap-4 md:gap-8 p-6 md:p-10 rounded-3xl md:rounded-[40px] bg-[rgba(53,17,101,0.4)]"
             >
               <div>
                 <img src="./assets/resource.png" alt="rich-resources" />
               </div>
-              <h3 class="text-2xl font-bold">Rich Resources</h3>
-              <p class="opacity-60">
+              <h3 class="text-xl md:text-2xl font-bold">Rich Resources</h3>
+              <p class="opacity-60 text-sm md:text-base">
                 Access show notes, transcripts, and additional learning
                 materials for every episode.
               </p>
@@ -195,11 +236,15 @@ Join thousands of young professionals and tech enthusiasts who start their day w
       </section>
 
       <section>
-        <div class="max-w-[1200px] mx-auto py-30">
-          <h2 class="text-5xl font-bold text-center">Featured Episodes</h2>
+        <div class="max-w-[1200px] mx-auto pt-16 md:pt-30 px-4">
+          <h2 class="text-3xl md:text-5xl font-bold text-center">
+            Featured Episodes
+          </h2>
 
           <!-- episode cards will go here -->
-          <div class="grid grid-cols-1 md:grid-cols-3 mt-10 gap-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 mt-6 md:mt-10 gap-6 md:gap-8"
+          >
             <div
               class="bg-[rgba(37,13,68,1)] space-y-5 rounded-3xl overflow-hidden"
             >
@@ -221,11 +266,11 @@ Join thousands of young professionals and tech enthusiasts who start their day w
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              <div class="space-y-3 px-5 pb-5">
-                <h3 class="text-2xl font-bold">
+              <div class="space-y-2 md:space-y-3 px-4 md:px-5 pb-4 md:pb-5">
+                <h3 class="text-xl md:text-2xl font-bold">
                   The Future of AI in Everyday Life
                 </h3>
-                <p class="opacity-60">
+                <p class="opacity-60 text-sm md:text-base">
                   Exploring how artificial intelligence is transforming our
                   daily routines and what to expect in the next decade.
                 </p>
@@ -253,11 +298,11 @@ Join thousands of young professionals and tech enthusiasts who start their day w
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              <div class="space-y-3 px-5 pb-5">
-                <h3 class="text-2xl font-bold">
+              <div class="space-y-2 md:space-y-3 px-4 md:px-5 pb-4 md:pb-5">
+                <h3 class="text-xl md:text-2xl font-bold">
                   Building Better Habits for Remote Work
                 </h3>
-                <p class="opacity-60">
+                <p class="opacity-60 text-sm md:text-base">
                   Practical strategies for staying productive and maintaining
                   work-life balance in a remote environment.
                 </p>
@@ -285,11 +330,11 @@ Join thousands of young professionals and tech enthusiasts who start their day w
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              <div class="space-y-3 px-5 pb-5">
-                <h3 class="text-2xl font-bold">
+              <div class="space-y-2 md:space-y-3 px-4 md:px-5 pb-4 md:pb-5">
+                <h3 class="text-xl md:text-2xl font-bold">
                   Career Growth in Tech: A Roadmap
                 </h3>
-                <p class="opacity-60">
+                <p class="opacity-60 text-sm md:text-base">
                   Expert advice on navigating your tech career from junior
                   developer to senior leadership roles.
                 </p>
@@ -301,17 +346,23 @@ Join thousands of young professionals and tech enthusiasts who start their day w
       </section>
 
       <section>
-        <div class="max-w-[1200px] mx-auto py-30 px-4 rounded-[40px]">
-          <h2 class="text-5xl font-bold text-center">Meet the Host</h2>
+        <div
+          class="max-w-[1200px] mx-auto py-16 md:py-30 px-4 rounded-3xl md:rounded-[40px]"
+        >
+          <h2 class="text-3xl md:text-5xl font-bold text-center">
+            Meet the Host
+          </h2>
           <div
-            class="flex flex-col md:flex-row gap-10 mt-10 bg-[rgba(35,14,61,1)] p-10 rounded-3xl items-center md:items-start"
+            class="flex flex-col md:flex-row gap-6 md:gap-10 mt-6 md:mt-10 bg-[rgba(35,14,61,1)] p-6 md:p-10 rounded-3xl items-center md:items-start"
           >
             <div class="w-50 h-50">
               <img class="w-50 h-50" src="./assets/host.png" alt="Host Image" />
             </div>
-            <div class="space-y-4 w-[70%]">
-              <h3 class="text-2xl font-bold">Alex Kumar</h3>
-              <p class="opacity-60">
+            <div
+              class="space-y-3 sm:space-y-4 w-full md:w-[65%] sm:text-start text-center"
+            >
+              <h3 class="text-xl md:text-2xl font-bold">Alex Kumar</h3>
+              <p class="opacity-60 text-sm md:text-base">
                 Tech entrepreneur, productivity expert, and lifelong learner.
                 Alex has been in the tech industry for over 10 years, working
                 with startups and Fortune 500 companies. Through TechWave, Alex
@@ -319,7 +370,7 @@ Join thousands of young professionals and tech enthusiasts who start their day w
                 anyone looking to grow in tech.
               </p>
               <ul
-                class="flex gap-6 mt-4 text-xl bg-linear-0 from-[rgba(247,233,63,1)] from via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] bg-clip-text text-transparent"
+                class="flex sm:justify-start justify-center gap-6 mt-4 text-xl bg-linear-0 from-[rgba(247,233,63,1)] from via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] bg-clip-text text-transparent"
               >
                 <li
                   class="border border-[rgba(83,60,114,1)] rounded-full w-10 h-10 flex justify-center items-center"
@@ -349,42 +400,46 @@ Join thousands of young professionals and tech enthusiasts who start their day w
     </main>
 
     <footer
-      class="bg-[url(./assets/footer-bg.png)] bg-no-repeat bg-center bg-size-[100%]"
+      class="sm:bg-[url(./assets/footer-bg.png)] bg-[url(./assets/mobile-footer.png)] bg-no-repeat bg-center sm:bg-cover bg-size-[450px] text-white"
     >
-      <div class="max-w-[1200px] mx-auto py-30 space-y-9">
-        <h1 class="text-6xl font-bold text-center">
+      <div
+        class="max-w-[1200px] mx-auto pb-16 pt-10 md:py-30 space-y-3 md:space-y-9 px-4"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold text-center">
           Tech<span
             class="bg-linear-0 from-[rgba(247,233,63,1)] from via-[rgba(251,9,180,1)] to-[rgba(145,0,248,1)] bg-clip-text text-transparent"
             >Wave</span
           >
         </h1>
-        <ul class="flex justify-center gap-5 mt-10text-white">
+        <ul
+          class="flex flex-wrap justify-center gap-4 md:gap-5 sm:mt-10 mt-5 text-white text-sm md:text-base"
+        >
           <li>
             <a href="">
               <i class="fa-brands fa-spotify"></i
-              ><span class="opacity-60 ml-3">Spotify</span>
+              ><span class="opacity-60 ml-2 md:ml-3">Spotify</span>
             </a>
           </li>
           <li>
             <a href="">
               <i class="fa-brands fa-apple"></i
-              ><span class="opacity-60 ml-3">Apple Podcasts</span>
+              ><span class="opacity-60 ml-2 md:ml-3">Apple Podcasts</span>
             </a>
           </li>
           <li>
             <a href="">
               <i class="fa-brands fa-youtube"></i
-              ><span class="opacity-60 ml-3">YouTube</span>
+              ><span class="opacity-60 ml-2 md:ml-3">YouTube</span>
             </a>
           </li>
           <li>
             <a href=""
               ><i class="fa-brands fa-twitter"></i>
-              <span class="opacity-60 ml-3">Twitter</span></a
+              <span class="opacity-60 ml-2 md:ml-3">Twitter</span></a
             >
           </li>
         </ul>
-        <p class="opacity-60 text-center">
+        <p class="opacity-60 text-center text-sm md:text-base">
           © 2026 TechWave Podcast. All rights reserved.
         </p>
       </div>
