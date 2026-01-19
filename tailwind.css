@@ -36,3 +36,30 @@ body {
 .animate-round-circle {
   animation: pop 0.8s linear infinite;
 }
+
+.bg-gradient-multi {
+  left: -32%;
+  top: -17%;
+  width: 600px;
+  height: 600px;
+  background:
+    linear-gradient(122deg, transparent 57%, rgba(145, 1, 249, 0.94) 91%),
+    linear-gradient(
+      71deg,
+      transparent 51%,
+      rgba(251, 9, 180, 0.944) 85%,
+      rgba(251, 9, 180, 1) 100%
+    ),
+    linear-gradient(39deg, rgba(72, 171, 224, 0) 48%, rgba(247, 233, 63, 1) 77%);
+  z-index: 0;
+  animation: rounded 3s linear infinite;
+}
+
+@keyframes rounded {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
